@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grille des programmes · Menya Plus TV</title>
+    <meta name="description" content="La grille hebdomadaire de Menya Plus TV.">
+    <link rel="icon" href="images/logo.jpg">
+    <meta property="og:site_name" content="Menya Plus TV">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@menyaplustv">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body data-nav="grille.html">
+    <header>
+        <div class="bar"><a class="brand" href="index.html"><img src="images/logo.jpg" alt="Logo Menya Plus TV"><span>Menya
+                    Plus TV</span></a>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="direct.html">Direct</a></li>
+                    <li><a href="emissions.html">Émissions</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="grille.html">Grille</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="live-pill" href="direct.html">Regarder le direct</a>
+            <button class="menu-btn" id="menu" aria-expanded="false">Menu</button>
+        </div>
+    </header>
+    <main>
+        <section class="pagehead">
+            <div class="wrap">
+                <h1>Grille des programmes</h1>
+                <p>Heure locale. La grille peut évoluer avec l'actualité.</p>
+            </div>
+        </section>
+        <section class="" id="">
+            <div class="wrap">
+                <div class="tabs" role="tablist" id="tabs"></div>
+                <div class="tbl">
+                    <table>
+                        <tbody id="grid"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><strong>Menya Plus TV</strong><br>Informer · Éclairer · Développer</div>
+            <div class="flinks"><a href="publicite.html">Publicité</a><a href="mentions-legales.html">Mentions
+                    légales</a><a href="contact.html">Contact</a></div>
+            <div>© <span id="y"></span> Menya Plus TV</div>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

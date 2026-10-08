@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Publicité et partenariats · Menya Plus TV</title>
+    <meta name="description" content="Faites connaître votre marque sur Menya Plus TV.">
+    <link rel="icon" href="images/logo.jpg">
+    <meta property="og:site_name" content="Menya Plus TV">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@menyaplustv">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body data-nav="publicite.html">
+    <header>
+        <div class="bar"><a class="brand" href="index.html"><img src="images/logo.jpg" alt="Logo Menya Plus TV"><span>Menya
+                    Plus TV</span></a>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="direct.html">Direct</a></li>
+                    <li><a href="emissions.html">Émissions</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="grille.html">Grille</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="live-pill" href="direct.html">Regarder le direct</a>
+            <button class="menu-btn" id="menu" aria-expanded="false">Menu</button>
+        </div>
+    </header>
+    <main>
+        <section class="pagehead">
+            <div class="wrap">
+                <h1>Publicité et partenariats</h1>
+                <p>Touchez une audience nationale et diaspora, sur mobile et sur écran.</p>
+            </div>
+        </section>
+        <section class="" id="">
+            <div class="wrap">
+                <div class="cols">
+                    <div class="box">
+                        <h3>Spots vidéo</h3>
+                        <p>Avant ou pendant nos programmes (pre-roll, mid-roll).</p>
+                    </div>
+                    <div class="box">
+                        <h3>Parrainage d'émissions</h3>
+                        <p>Associez votre marque à un secteur : santé, économie, sport, culture...</p>
+                    </div>
+                    <div class="box">
+                        <h3>Bannières</h3>
+                        <p>Visibilité sur le site et l'application.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Contenus sponsorisés</h3>
+                        <p>Reportages et portraits réalisés par notre équipe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="soft" id="">
+            <div class="wrap">
+                <h2>Demander nos tarifs</h2>
+                <form data-form="Publicité" novalidate>
+                    <div><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name" maxlength="80" required></div>
+                    <div><label for="entreprise">Entreprise</label><input id="entreprise" name="entreprise" type="text" autocomplete="organization" maxlength="100"
+                            required></div>
+                    <div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+                    <div><label for="offre">Offre souhaitée</label><select id="offre" name="offre" required>
+                            <option value="">Choisissez une offre</option>
+                            <option>Spots vidéo</option>
+                            <option>Parrainage d'émission</option>
+                            <option>Bannières</option>
+                            <option>Contenu sponsorisé</option>
+                            <option>Autre</option>
+                        </select></div>
+                    <div><label for="message">Votre projet</label><textarea id="message" name="message" rows="4" maxlength="2000"
+                            required></textarea></div><button class="send" type="submit">Envoyer la demande</button>
+                    <p class="msg" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><strong>Menya Plus TV</strong><br>Informer · Éclairer · Développer</div>
+            <div class="flinks"><a href="publicite.html">Publicité</a><a href="mentions-legales.html">Mentions
+                    légales</a><a href="contact.html">Contact</a></div>
+            <div>© <span id="y"></span> Menya Plus TV</div>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

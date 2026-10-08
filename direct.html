@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Direct · Menya Plus TV</title>
+    <meta name="description" content="Regardez Menya Plus TV en direct.">
+    <link rel="icon" href="images/logo.jpg">
+    <meta property="og:site_name" content="Menya Plus TV">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@menyaplustv">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body data-nav="direct.html">
+    <header>
+        <div class="bar"><a class="brand" href="index.html"><img src="images/logo.jpg" alt="Logo Menya Plus TV"><span>Menya
+                    Plus TV</span></a>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="direct.html">Direct</a></li>
+                    <li><a href="emissions.html">Émissions</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="grille.html">Grille</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="live-pill" href="direct.html">Regarder le direct</a>
+            <button class="menu-btn" id="menu" aria-expanded="false">Menu</button>
+        </div>
+    </header>
+    <main>
+        <section class="pagehead">
+            <div class="wrap">
+                <h1>Menya Plus TV en direct</h1>
+                <p>Suivez nos programmes en direct, où que vous soyez.</p>
+            </div>
+        </section>
+        <section class="hero" id="">
+            <div class="wrap">
+                <div class="hero-grid" style="color:#fff">
+                    <div>
+                        <div class="player"><video id="video" controls playsinline
+                                aria-label="Menya Plus TV en direct"></video>
+                            <div class="acover" id="acover" hidden><img src="images/logo.jpg" alt=""><strong>Mode audio seul</strong><span>L'image est désactivée : le son continue.</span></div>
+                            <div class="off" id="off"><img src="images/logo.jpg" alt=""><strong>Le direct arrive
+                                    bientôt</strong><span>Revoyez nos émissions dans la rubrique Émissions.</span></div>
+                        </div>
+                        <div class="ctrl"><button class="btn" id="eco" type="button" aria-pressed="false">Économie de
+                                données</button><button class="btn" id="audio" type="button" aria-pressed="false">Audio seul</button>
+                        </div>
+                        <p class="pstate" id="pstate" role="status" aria-live="polite"></p>
+                    </div>
+                    <aside class="now" aria-label="Programme du jour">
+                        <h3>Programme du jour</h3>
+                        <ol id="today"></ol>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="" id="">
+            <div class="wrap">
+                <h2>Connexion lente ?</h2>
+                <div class="cols">
+                    <div class="box">
+                        <h3>Économie de données</h3>
+                        <p>Le bouton « Économie de données » choisit la qualité la plus basse pour consommer moins
+                            d'internet.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Audio seul</h3>
+                        <p>Écoutez le programme sans l'image : idéal pour les petites connexions.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Grille des programmes</h3>
+                        <p>Retrouvez tous les horaires dans la <a href="grille.html">grille complète</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><strong>Menya Plus TV</strong><br>Informer · Éclairer · Développer</div>
+            <div class="flinks"><a href="publicite.html">Publicité</a><a href="mentions-legales.html">Mentions
+                    légales</a><a href="contact.html">Contact</a></div>
+            <div>© <span id="y"></span> Menya Plus TV</div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

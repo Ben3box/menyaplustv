@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Informer, Éclairer, Développer · Menya Plus TV</title>
+    <meta name="description"
+        content="Menya Plus TV : la télévision en ligne qui couvre tous les secteurs de la vie du pays.">
+    <link rel="icon" href="images/logo.jpg">
+    <meta property="og:site_name" content="Menya Plus TV">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@menyaplustv">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body data-nav="">
+    <header>
+        <div class="bar"><a class="brand" href="index.html"><img src="images/logo.jpg" alt="Logo Menya Plus TV"><span>Menya
+                    Plus TV</span></a>
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="direct.html">Direct</a></li>
+                    <li><a href="emissions.html">Émissions</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="secteurs.html">Secteurs</a></li>
+                    <li><a href="grille.html">Grille</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="live-pill" href="direct.html">Regarder le direct</a>
+            <button class="menu-btn" id="menu" aria-expanded="false">Menu</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <h1>Informer. Éclairer. Développer.</h1>
+                <p class="lead">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                     la vie du pays en images, en direct et à la demande.</p>
+                <div class="hero-grid">
+                    <div>
+                        <div class="player"><video id="video" controls playsinline
+                                aria-label="Menya Plus TV en direct"></video>
+                            <div class="off" id="off"><img src="images/logo.jpg" alt=""><strong>Le direct arrive
+                                    bientôt</strong><span>Revoyez nos émissions dans la rubrique Émissions.</span></div>
+                        </div>
+                        <div class="ctrl"><button class="btn" id="eco" aria-pressed="false">Économie de
+                                données</button><button class="btn" id="audio" aria-pressed="false">Audio seul</button>
+                        </div>
+                    </div>
+                    <aside class="now" aria-label="Programme du jour">
+                        <h3>Programme du jour</h3>
+                        <ol id="today"></ol>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="" id="">
+            <div class="wrap">
+                <h2>Huit secteurs, une seule chaîne</h2>
+                <p class="sub">Choisissez le domaine qui vous intéresse.</p>
+                <div class="sectors" id="sectors"></div>
+            </div>
+        </section>
+        <section class="soft" id="">
+            <div class="wrap">
+                <h2>Dernières émissions</h2>
+                <div class="videos" id="videos" data-limit="4"></div><a class="more" href="emissions.html">Voir toutes
+                    les émissions</a>
+            </div>
+        </section>
+        <section class="soft" id="">
+            <div class="wrap">
+                <h2>Suivez-nous au quotidien</h2>
+                <p class="sub">Nos dernières publications, mises à jour automatiquement.</p>
+                <div class="feeds">
+                    <div>
+                        <h3>Sur Facebook</h3>
+                        <iframe id="fb" title="Page Facebook de Menya Plus TV" loading="lazy" height="600"
+                            style="border:0;width:100%;max-width:500px" allow="encrypted-media"></iframe>
+                    </div>
+                    <div>
+                        <h3>Sur X</h3>
+                        <div id="xfeed"></div>
+                    </div>
+                </div>
+                <a class="more" href="actualites.html">Toutes les actualités</a>
+            </div>
+        </section>
+        <section class="" id="">
+            <div class="wrap">
+                <div class="cols">
+                    <div class="box">
+                        <h3>Informer</h3>
+                        <p>Une information fiable, vérifiée et pluraliste, de la capitale aux collines.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Éclairer</h3>
+                        <p>Des experts, des explications et des conseils pratiques pour mieux comprendre.</p>
+                    </div>
+                    <div class="box">
+                        <h3>Développer</h3>
+                        <p>Valoriser les talents, les entrepreneurs et les initiatives qui font avancer le pays.</p>
+                    </div>
+                </div><a class="more" href="a-propos.html">En savoir plus sur Menya Plus TV</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            <div><strong>Menya Plus TV</strong><br>Informer · Éclairer · Développer</div>
+            <div class="flinks"><a href="publicite.html">Publicité</a><a href="mentions-legales.html">Mentions
+                    légales</a><a href="contact.html">Contact</a></div>
+            <div>© <span id="y"></span> Menya Plus TV</div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
