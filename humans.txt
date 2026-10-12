@@ -1,0 +1,7 @@
+/* ÉQUIPE */
+Concepteur et développeur : Ir Iriganje Benjamin
+Site : https://ben3box.github.io/wdd231/
+
+/* SITE */
+Projet : Site web de Menya Plus TV
+Dernière mise à jour : octobre 2026

@@ -71,3 +71,6 @@ const GRID = {
     sam: [["06h-08h", "Matinale week-end"], ["08h-10h", "Éducation et jeunesse"], ["10h-12h", "Magazine santé et bien-être"], ["12h-13h", "Journal de midi"], ["13h-15h", "Environnement et climat"], ["15h-17h", "Sport en direct"], ["17h-19h", "Culture et traditions"], ["19h-20h", "Journal du soir"], ["20h-21h30", "Concert, spectacle ou festival"], ["21h30-23h", "Film ou soirée musicale"], ["23h-06h", "Rediffusions et musique"]],
     dim: [["06h-08h", "Spiritualité : émissions religieuses"], ["08h-10h", "Spiritualité et famille"], ["10h-12h", "Société et famille"], ["12h-13h", "Journal de midi"], ["13h-15h", "Rediffusion des meilleures émissions"], ["15h-17h", "Sport en direct"], ["17h-19h", "Documentaires : culture, environnement"], ["19h-20h", "Journal du soir"], ["20h-21h30", "Bilan de la semaine"], ["21h30-23h", "Film ou série"], ["23h-06h", "Rediffusions et musique"]]
 };
+
+/* ===== SIGNATURE DU CONCEPTEUR : remplacez par votre nom (et votre lien) : elle s'affiche en bas de TOUTES les pages ===== */
+const DESIGNER = { name: "Ir Iriganje Benjamin", url: "https://ben3box.github.io/wdd231/" };

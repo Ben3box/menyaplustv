@@ -1,6 +1,6 @@
 /* Menya Plus TV : script commun à toutes les pages (données dans data.js) */
 const $ = id => document.getElementById(id);
-const now = new Date(), day = now.getDay(), hr = now.getHours();
+const now = new Date(), bj = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Bujumbura" })), day = bj.getDay(), hr = bj.getHours();   /* heure du Burundi */
 const key = day === 0 ? "dim" : day === 6 ? "sam" : "sem";
 const cur = hr >= 23 || hr < 6 ? 10 : hr < 8 ? 0 : hr < 10 ? 1 : hr < 12 ? 2 : hr < 13 ? 3 : hr < 15 ? 4 : hr < 17 ? 5 : hr < 19 ? 6 : hr < 20 ? 7 : hr < 22 ? 8 : 9;
 
@@ -99,8 +99,8 @@ if ($("xfeed")) {
 
 /* programme du jour : chaque ligne est un bouton qui ouvre les liens de rediffusion sur les réseaux de la TV */
 if ($("today")) {
-  const from = 0;
-  const rows = GRID[key];   /* tout le programme du jour, de la première à la dernière émission */
+  const compact = $("today").dataset.compact, from = compact ? Math.max(0, Math.min(cur, GRID[key].length - 4)) : 0;
+  const rows = GRID[key].slice(from, compact ? from + 4 : undefined);   /* accueil : en ce moment + les 3 suivants */   /* tout le programme du jour, de la première à la dernière émission */
   /* secteurs cités dans le titre d'un programme (ex. « Culture et traditions ») */
   const sectorsOf = t => SECTORS.filter(x => t.toLowerCase().includes(x.name.split(" ")[0].toLowerCase()));
   /* liens de rediffusion : REPLAY (data.js) pour le secteur, sinon les comptes officiels de la TV */
@@ -149,6 +149,8 @@ const v = $("video");
 let hls = null;
 const opt = { eco: false, audio: false };
 try { Object.assign(opt, JSON.parse(localStorage.getItem("menya-player") || "{}")); } catch { }
+const md = new URLSearchParams(location.search).get("mode"); if (md === "eco" || md === "audio") opt[md] = true;   /* liens de l'accueil */
+if ($("nowtitle")) $("nowtitle").textContent = GRID[key][cur][0] + " · " + GRID[key][cur][1];
 const setPlayer = () => {
   /* qualité la plus basse (niveau 0) en économie de données ou en audio seul ; -1 = automatique */
   if (hls) hls.currentLevel = opt.eco || opt.audio ? 0 : -1;
@@ -237,3 +239,19 @@ document.querySelectorAll("form[data-form]").forEach(f => {
   });
 });
 if ($("y")) $("y").textContent = now.getFullYear();
+
+/* barre de navigation du bas (mobile) + signature du concepteur */
+{
+  const tabs = [["index.html", "Accueil", '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>'], ["grille.html", "TV", '<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8"/>'], ["direct.html", "Direct", '<circle cx="12" cy="12" r="2"/><path d="M7.5 7.5a6 6 0 0 0 0 9M16.5 7.5a6 6 0 0 1 0 9"/>'], ["emissions.html", "Vidéos", '<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/>']], cp = document.body.dataset.nav || "index.html", S = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+  const nb = document.createElement("div"); nb.className = "bnav";
+  nb.innerHTML = tabs.map(([h, n, p]) => `<a href="${h}"${h === cp ? ' aria-current="page"' : ""}><svg ${S}>${p}</svg>${n}</a>`).join("")
+    + `<button type="button" id="more" aria-label="Plus de pages"><svg ${S}><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>Plus</button>`;
+  document.body.appendChild(nb);
+  $("more").onclick = () => document.querySelector("nav").classList.toggle("open");
+  const cr = $("credit");
+  if (cr && DESIGNER.name) {
+    cr.innerHTML = "Site conçu par " + (DESIGNER.url ? `<a href="${esc(DESIGNER.url)}" target="_blank" rel="noopener">${esc(DESIGNER.name)}</a>` : `<strong>${esc(DESIGNER.name)}</strong>`);
+    const m = document.createElement("meta"); m.name = "author"; m.content = DESIGNER.name; document.head.appendChild(m);
+    console.log("%cSite conçu par " + DESIGNER.name, "color:#F5A800;font:700 14px Arial");
+  }
+}

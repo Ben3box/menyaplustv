@@ -658,6 +658,7 @@ nav a[aria-current=page] {
 .hero-grid+.tips {
     margin-top: 28px
 }
+
 /* réseaux sociaux */
 .snrow {
     display: flex;
