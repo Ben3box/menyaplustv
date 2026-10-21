@@ -1211,3 +1211,165 @@ select[aria-invalid=true] {
         color: var(--gold)
     }
 }
+
+/* ===== Articles (page article + carte « À la une » du secteur) ===== */
+.article-head .meta {
+    color: #b9c5ee;
+    font-size: .95rem;
+    margin-top: 12px
+}
+
+.article-head .tagline {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font: 800 .8rem var(--head);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px
+}
+
+.article {
+    max-width: 760px;
+    margin: auto
+}
+
+.article .lead {
+    font-size: 1.2rem;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 20px
+}
+
+.article p,
+.article ul {
+    margin-bottom: 16px
+}
+
+.article ul {
+    padding-left: 22px
+}
+
+.article h2 {
+    margin: 32px 0 10px
+}
+
+.article figure {
+    margin: 24px 0
+}
+
+.article figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--line)
+}
+
+.article figcaption {
+    font-size: .9rem;
+    color: var(--mute);
+    margin-top: 8px
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 24px 0
+}
+
+.photo-grid figure {
+    margin: 0
+}
+
+.photo-grid img {
+    aspect-ratio: 4/5;
+    object-fit: cover
+}
+
+.photo-grid.wide img {
+    aspect-ratio: 4/3
+}
+
+.note {
+    border-left: 6px solid var(--gold);
+    background: var(--soft);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 24px 0;
+    font-size: .98rem
+}
+
+.back {
+    display: inline-block;
+    margin-top: 28px;
+    font-weight: 600;
+    color: var(--blue)
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit
+}
+
+.feature:hover {
+    background: var(--soft)
+}
+
+.feature img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover
+}
+
+.feature .ft {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px
+}
+
+.feature .tagline {
+    align-self: flex-start;
+    background: var(--gold);
+    color: var(--navy);
+    font: 800 .75rem var(--head);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 6px
+}
+
+.feature h3 {
+    font-size: 1.35rem
+}
+
+.feature small {
+    color: var(--mute)
+}
+
+.feature .go {
+    font-weight: 600;
+    color: var(--blue)
+}
+
+@media(max-width:800px) {
+    .feature {
+        grid-template-columns: 1fr
+    }
+
+    .feature img {
+        min-height: 0;
+        aspect-ratio: 16/9
+    }
+}
